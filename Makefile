@@ -3,12 +3,12 @@
 	sum_originals
 	gen_masks
 
-all: bin/xor_files
+all: bin/xor_file
 
 bin:
 	@mkdir $@
 
-bin/xor_files: src/xor_files.c bin
+bin/xor_file: src/xor_file.c bin
 	@gcc $< -o $@
 
 sum_originals:
