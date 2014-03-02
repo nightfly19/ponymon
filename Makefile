@@ -17,3 +17,6 @@ sum_originals:
 
 gen_masks: sum_originals
 	@./bin/gen_masks
+
+apply_masks: sum_originals
+	@./bin/apply_masks
