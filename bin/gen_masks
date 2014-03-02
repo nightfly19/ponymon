@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+echo "Generating xor masks"
+result=0
+for i in original/*;do
+    echo $i
+    ./bin/xor_files "$i" "working/$(basename "$i")" "patch_mask/$(basename "$i")"
+    if [ $? -eq 0 ];then
+        echo -e "\t[OK]";
+    else
+        echo -e "\t[failed]";
+        result=0
+    fi
+done
+
+exit $result
